@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Jaguar</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body link="#000000" vlink="#000000" alink="#000000">
+		<div class="topo" />
+		<div class="logo" />
+
+		<div class="menu_esquerdo">
+			<table class="tabela">
+				<tr>
+					<td class="borda">
+						<a href="">Home</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="borda">
+						<a href="nossa-empresa.html">Nossa Empresa</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="borda">
+						<a href="produtos.html">Produtos</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="borda">
+						<a href="">Franquias</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="borda">
+						<a href="">Fale Conosco</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="centro">
+			<img class="figura" src="imgs/1.jpg">
+			<img class="figura" src="imgs/2.jpg">
+			<img class="figura" src="imgs/3.jpg">
+			<img class="figura" src="imgs/4.jpg">
+			<img class="figura" src="imgs/5.jpg">
+			<script>
+				var myIndex = 0;
+				carousel();
+
+				function carousel() {
+					var i;
+					var x = document.getElementsByClassName("figura");
+					for (i = 0; i < x.length; i++) {
+					   x[i].style.display = "none";  
+					}
+					myIndex++;
+					if (myIndex > x.length) {myIndex = 1}    
+					x[myIndex-1].style.display = "block";  
+					setTimeout(carousel, 9000);    
+				}
+			</script>
+		</div>
+		<div class="rodape">
+			© 2018 Jaguar - Todos os direitos reservados
+		</div>
+</body>
+</html>
